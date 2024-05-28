@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stopping Event Propagation Example</title>
+</head>
+<body>
+  <div id="outer">
+    <div id="inner">
+      <button id="btn">Click me</button>
+    </div>
+  </div>
+  <script>
+    const outer = document.getElementById('outer');
+    const inner = document.getElementById('inner');
+    const btn = document.getElementById('btn');
+    outer.addEventListener('click', (event) => {
+      console.log('Outer clicked');
+    });
+    inner.addEventListener('click', (event) => {
+      console.log('Inner clicked');
+      event.stopPropagation();
+    });
+    btn.addEventListener('click', (event) => {
+      console.log('Button clicked');
+    });
+  </script>
+</body>
+</html>
