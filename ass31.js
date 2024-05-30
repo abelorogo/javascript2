@@ -41,18 +41,16 @@ total(f1,f2,f3 )*/
 function  sumAsync(num1,num2,callback){
 
 result= num1+num2
-result2= num1*num2
-result3= num1/num2
-result4= num1%num2
 
-callback(result,result2,result3,result4)
+
+callback(result)
 }
 
 function callMe(){
 
 setTimeout(function() {
 
-    console.log(result,result2,result3,result4)
+    console.log(result)
 }, 3000);
 
 
